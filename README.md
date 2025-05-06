@@ -25,13 +25,13 @@ cd inventory-tracking-api
 ```
 
 ### 2. Set Up the Environment
-## Run the command to install required elements
+### Run the command to install required elements
 
 pip install -r requirements.txt
 
 ### 3. Set MySQL Credentials
-## You will need MySQL Installed. You can follow how to install here https://dev.mysql.com/downloads/installer/
-## Make sure your DB Credentials are correct in the .env File
+### You will need MySQL Installed. You can follow how to install here https://dev.mysql.com/downloads/installer/
+#### Make sure your DB Credentials are correct in the .env File
 
 DB_HOST=localhost
 DB_USER=root #Replace with your DB USERNAME
@@ -40,16 +40,16 @@ DB_NAME=inventory_tracking
 
 ### 4. Create the DB
 
-# Login using:
+### Login using:
 mysql -u root -p
 
-# Then run SQL commands:
+### Then run SQL commands:
 CREATE DATABASE inventory_tracking;
 
-# Then import the schema
+### Then import the schema
 mysql -u root -p inventory_db < inventory_tracking.sql
 
-### 5. Inventory Tracking System API
+### 5. Run Thes Inventory Tracking System API
 uvicorn app.main:app --reload
 
 
