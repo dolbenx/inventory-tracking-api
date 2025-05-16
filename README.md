@@ -1,56 +1,32 @@
-# 📦 Inventory Tracking System API
+# 🧾 Inventory Tracking Database System
 
-## Description
+## 📌 Description
+This project is a complete **Inventory Tracking Database Management System** built using **MySQL only**. It is designed to manage and track products, suppliers, warehouses, inventory levels, and transaction history (stock-in/out) in a scalable and normalized relational structure.
 
-A simple but effective inventory tracking api to help track your inventory
+## 🛠️ Features
+- Tracks suppliers, products, and warehouses.
+- Maintains inventory levels per product per warehouse.
+- Records IN and OUT stock transactions.
+- Tracks users responsible for stock movements.
+- Fully normalized relational schema with constraints.
 
-This project is a full-featured inventory tracking system built with:
-- **MySQL** (database)
-- **FastAPI** (Python web framework)
-- **SQLAlchemy** (ORM)
-- **Pydantic** (data validation)
+## 🧪 How to Set Up
 
-It includes:
-- Relational database schema with constraints
-- RESTful CRUD API
-- Sample data for testing
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/dolbenx/invetory-tracking-DB
 
-## 🚀 How to Run
+2. Open MySQL or phpMyAdmin. ## Make sure its installed
 
-### 1. Clone the Repository
+3. Import the SQL file:
+    SOURCE path/to/inventory_tracking.sql;
 
-```bash
-git clone https://github.com/dolbenx/inventory-tracking-api
-cd inventory-tracking-api
-```
+    ## OR using MySQL CLI: 
 
-### 2. Set Up the Environment
-### Run the command to install required elements
+    mysql -u your_username -p < inventory_tracking.sql
 
-pip install -r requirements.txt
+4. The database will be created as InventoryTrackingDB.
 
-### 3. Set MySQL Credentials
-### You will need MySQL Installed. You can follow how to install here https://dev.mysql.com/downloads/installer/
-#### Make sure your DB Credentials are correct in the .env File
+#### ERD
 
-DB_HOST=localhost
-DB_USER=root #Replace with your DB USERNAME
-DB_PASSWORD=yourpassword #Replace with your DB PASSWORD
-DB_NAME=inventory_tracking 
-
-### 4. Create the DB
-
-### Login using:
-mysql -u root -p
-
-### Then run SQL commands:
-CREATE DATABASE inventory_tracking;
-
-### Then import the schema
-mysql -u root -p inventory_db < inventory_tracking.sql
-
-### 5. Run Thes Inventory Tracking System API
-uvicorn app.main:app --reload
-
-
-
+![alt text](<ERD Diagram.png>)
